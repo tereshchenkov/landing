@@ -245,11 +245,15 @@ section {
   height: 4px;
   background-color: #f64825; }
 
-@media (max-width: 767px) and (min-width: 481px) {
+@media (max-width: 767px) {
   .services-info .btn,
   .services-info img {
     display: block;
     margin: 0 auto; }
+  .services-info .btn {
+    margin-bottom: 10px; }
+  .services-info p {
+    padding-bottom: 20px; }
 
   .services-list {
     text-align: center; }
