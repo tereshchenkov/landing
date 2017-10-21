@@ -42,6 +42,23 @@ body
   &:active,
   &:active:focus
     outline: none
+  &:hover
+    box-shadow: 0 6px 14px 0 rgba(20,20,21,.09)
+  &-plus
+    margin-right: 12px
+    margin-bottom: 2px
+  &-plus,
+  &-plus::before
+    display: inline-block
+    width: 16px
+    height: 2px
+    background-color: $grey
+    line-height: 16px
+    vertical-align: middle
+  &-plus::before
+    content: ""
+    transform: rotate(90deg)
+    margin-top: -17px
 
 
 section
@@ -51,6 +68,7 @@ section
 
 .section
   &-header
+    margin-bottom: 6%
     h2
       font-size: 50px
     p
@@ -72,23 +90,7 @@ section
       bottom: -30px
       margin-left: -45%
       width: 90%
-      &:hover
-        box-shadow: 0 6px 14px 0 rgba(20,20,21,.09)
-      &-plus
-        margin-right: 12px
-        margin-bottom: 2px
-      &-plus,
-      &-plus::before
-        display: inline-block
-        width: 16px
-        height: 2px
-        background-color: $grey
-        line-height: 16px
-        vertical-align: middle
-      &-plus::before
-        content: ""
-        transform: rotate(90deg)
-        margin-top: -17px
+
     i.fa
       font-size: 50px
     h4
@@ -265,3 +267,38 @@ section
     color: $white
     &:hover
       box-shadow: 0px 8px 12px 3px rgba(20, 20, 21, 0.38)
+.services
+  &-list
+    list-style: none
+    &-item
+      display: block
+      margin: 5px auto
+      width: 100px
+      height: 100px
+      text-align: center
+      background-color: $bg-grey
+  &-info
+    .btn
+      border: 1px solid lighten($grey, 50%)
+    h4
+      font-size: 30px
+    p
+      font-size: 16px
+      padding: 20px 0 30px
+
+    &-line
+      display: block
+      width: 60px
+      height: 4px
+      background-color: $dark-orange
+
+@media (max-width: 767px) and (min-width: 481px)
+  .services-info
+    .btn,
+    img
+      display: block
+      margin: 0 auto
+  .services-list
+    text-align: center
+    &-item
+      display: inline-block
