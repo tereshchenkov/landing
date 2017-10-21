@@ -1,0 +1,267 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+
+@mixin open-sans-light
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+
+@mixin open-sans-normal
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+
+@mixin open-sans-bald
+  font-family: 'Open Sans', sans-serif
+  font-weight: 600
+
+
+$grey: #706b73
+$orange: #fa9a87
+$bg-grey: #f5f5f5
+$white: #fff
+$dark-orange: darken($orange,20%)
+
+$bg-tomi: #4eb2f7
+$bg-set: #c049f8
+$bg-settings: #817eff
+$bg-image: #f74770
+
+
+
+body
+  @include open-sans-normal
+  font-size: 14px
+
+.btn
+  border: none
+  color: $grey
+  padding: 15px 35px
+  border-radius: 50px
+  background-color: $white
+  font-size: 16px
+  &:focus,
+  &:focus:active,
+  &:active,
+  &:active:focus
+    outline: none
+
+
+section
+  padding-top: 10%
+  padding-bottom: 1%
+
+
+.section
+  &-header
+    h2
+      font-size: 50px
+    p
+      font-size: 16px
+
+
+.process
+  &-box:hover
+    box-shadow: 0 0 35px 0 rgba(20,20,21,.21)
+  &-box
+    position: relative
+    color: $white
+    text-align: center
+    padding: 35px 25px 20px
+    margin-top: 75px
+    .btn
+      position: absolute
+      left: 50%
+      bottom: -30px
+      margin-left: -45%
+      width: 90%
+      &:hover
+        box-shadow: 0 6px 14px 0 rgba(20,20,21,.09)
+      &-plus
+        margin-right: 12px
+        margin-bottom: 2px
+      &-plus,
+      &-plus::before
+        display: inline-block
+        width: 16px
+        height: 2px
+        background-color: $grey
+        line-height: 16px
+        vertical-align: middle
+      &-plus::before
+        content: ""
+        transform: rotate(90deg)
+        margin-top: -17px
+    i.fa
+      font-size: 50px
+    h4
+      font-size: 20px
+      @include open-sans-bald
+      margin-top: 20px
+    p
+      margin: 25px 0 20px 0
+      font-size: 16px
+  &-tomi
+    background-color: $bg-tomi
+  &-set
+    background-color: $bg-set
+  &-settings
+    background-color: $bg-settings
+  &-image
+    background-color: $bg-image
+
+
+
+
+.main-header_logo
+  width: 155px
+  height: 55px
+  border: 3px solid $grey
+  text-align: center
+  line-height: 49px
+  font-size: 36px
+  @include open-sans-bald
+  color: #706b73
+
+
+.first-word-color
+  color: $dark-orange
+
+
+.main-header
+  padding-top: 2%
+
+
+.header-nav_bar
+  width: 35px
+  height: 38px
+  float: right
+  line-height: 65px
+
+
+.ham-line
+  display: inline-block
+  position: relative
+  width: 35px
+  height: 4px
+  margin: 6px 0 6px 0
+  background-color: $grey
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -ms-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+
+
+.ham-line::after,
+.ham-line::before
+  display: block
+  content: ''
+  position: absolute
+  width: 35px
+  height: 4px
+  background-color: $grey
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -ms-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+
+
+.ham-line::after
+  bottom: -8px
+
+
+.ham-line::before
+  top: -8px
+
+.main
+  &-text
+    text-align: center
+    font-style: 50px
+    margin-top: 3%
+    margin-bottom: 8%
+    h1
+      @include open-sans-bald
+      color: $grey
+      margin-bottom: 3%
+    p
+      padding: 0 15px 0 15px
+  &-header
+    min-height: 100vh
+    background: $bg-grey
+    background: url(../img/bg-header.jpg)
+  &-form
+    display: flex
+    flex-direction: column
+    padding: 35px
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0 0 57px 0 rgba(20,20,21,0.2)
+    margin-bottom: 30px
+    p
+      @include open-sans-bald
+      font-size: 20px
+      text-align: center
+      margin-bottom: 40px
+    input,
+    textarea
+      border: none
+      border-bottom: 1px solid $grey
+      margin-bottom: 30px
+      padding: 0 5px 0
+      &:focus
+        outline: none
+    &-btn
+      display: block
+      margin: 0 auto
+      background-color: $dark-orange
+      border: none
+      padding: 15px 35px
+      color: $white
+      font-size: 16px
+      border-radius: 50px
+      span
+        font-size: 25px
+      &:focus:active,
+      &:active,
+      &:active:focus
+      &:focus,
+            outline: none
+      &:hover
+        box-shadow: 0 11px 20px 0 rgba(20,20,21,.08)
+
+.works-box
+  position: relative
+  margin-bottom: 5%
+  img
+    width: 100%
+
+@media (max-width: 991px) and (min-width: 768px)
+  .works-box
+    height: 220px
+    margin-bottom: 20px
+
+.signature
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0, .5)
+  color: $white
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  transition: opacity .2s
+  &:hover
+    opacity: 1
+  p
+    font-size: 22px
+    @include open-sans-bald
+    text-transform: uppercase
+    margin-bottom: 35px
+  .btn
+    background-color: $dark-orange
+    color: $white
+    &:hover
+      box-shadow: 0px 8px 12px 3px rgba(20, 20, 21, 0.38)
